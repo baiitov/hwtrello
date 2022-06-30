@@ -40,7 +40,7 @@ const Login = () => {
 				setIsForm(false)
 				dispatch(uiActions.uiLoading())
 				setTimeout(() => {
-					navigate('/Trello')
+					navigate('/trello')
 					dispatch(uiActions.neLoading())
 				}, 2000)
 			} else if(email !== el.email && password !== el.password) {

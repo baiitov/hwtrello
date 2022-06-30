@@ -1,8 +1,9 @@
 import './App.css'
+import Login from './components/login/login'
+
 import Error from './components/UI/Error'
 import { Navigate, Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
-import Login from './components/login/login'
 import MainPage from './components/login/MainPage'
 import Add from './components/todo/Add'
 import Loading from './components/UI/Loading'
@@ -12,18 +13,18 @@ function App() {
 	return (
 		<div className='App'>
 			{loading && <Loading />}
-			{/* <Modal/> */}
+
 			<Routes>
 				<Route
 					path='/'
-					element={<Navigate replace to={'/MainPage'} />}
+					element={<Navigate replace to={'/mainPage'} />}
 				/>
 
-				<Route path='/MainPage' element={<MainPage />} />
+				<Route path='/mainPage' element={<MainPage />} />
 
-				<Route path='/Login' replace element={<Login />} />
+				<Route path='/login' replace element={<Login />} />
 
-				<Route path='/Trello' element={<Add />} />
+				<Route path='/trello' element={<Add />} />
 				<Route path='*' element={<Error />} />
 			</Routes>
 		</div>

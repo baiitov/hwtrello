@@ -44,7 +44,7 @@ const Imgdiv = styled.div`
 const MainPage = () => {
 	const navigate = useNavigate()
 	const buttonHandler = () => {
-		return navigate('/Login')
+		return navigate('/login')
 	}
 	return (
 		<Divv>
